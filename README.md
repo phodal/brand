@@ -22,3 +22,19 @@ Markdown:
 Markdown:
 
 	[![Phodal's Article](./shields/articles-small.png)](https://www.phodal.com/)
+
+Setup
+---
+
+Install Deps:
+
+    pip install -r requirements.txt
+
+Run:
+
+	python generate.py
+
+License
+---	
+
+MIT
