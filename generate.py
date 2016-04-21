@@ -13,7 +13,7 @@ def generate_idea():
   dwg.save()
 
 def generate_article():
-  dwg = svgwrite.Drawing('shields/article.svg', size=(u'1286', u'150'))
+  dwg = svgwrite.Drawing('shields/article.svg', size=(u'1086', u'150'))
 
   shapes = dwg.add(dwg.g(id='shapes', fill='none'))
   shapes.add(dwg.rect((0, 0), (640, 150), fill='#5E6772'))

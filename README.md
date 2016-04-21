@@ -12,3 +12,13 @@ Usage
 ---
 
 [![Phodal's Idea](./shields/idea-small.png)](http://ideas.phodal.com/)
+
+Markdown:
+
+    [![Phodal's Idea](./shields/idea-small.png)](http://ideas.phodal.com/)
+
+[![Phodal's Article](./shields/articles-small.png)](https://www.phodal.com/)
+
+Markdown:
+
+	[![Phodal's Article](./shields/articles-small.png)](https://www.phodal.com/)
