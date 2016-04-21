@@ -6,6 +6,7 @@ Badge
 ---
 
 [![Phodal's Idea](http://brand.phodal.com/shields/idea.svg)](http://ideas.phodal.com/)
+[![Phodal's Article](http://brand.phodal.com/shields/article.svg)](https://www.phodal.com/)
 
 Usage
 ---
