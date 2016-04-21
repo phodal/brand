@@ -5,7 +5,7 @@
 Badge
 ---
 
-[![Phodal's Idea](./shields/idea.svg)](http://ideas.phodal.com/)
+[![Phodal's Idea](http://brand.phodal.com/shields/idea.svg)](http://ideas.phodal.com/)
 
 Usage
 ---
