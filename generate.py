@@ -30,7 +30,7 @@ def generate_idea():
         for x in range(y_text_split + max_rect_length, width, max_rect_length):
             shapes.add(dwg.line((x - 4, y), (x + 4, y), stroke='#EEEEEE', stroke_width='2', stroke_opacity=0.4))
 
-    shapes.add(dwg.text('idea', insert=(704, 122), fill='#FFFFFF', font_size=120, font_family='Helvetica'))
+    shapes.add(dwg.text('idea', insert=(704, 119), fill='#FFFFFF', font_size=120, font_family='Helvetica'))
     dwg.save()
 
 
@@ -41,7 +41,7 @@ def generate_article():
     shapes.add(dwg.rect((0, 0), (640, 150), fill='#5E6772'))
     shapes.add(dwg.rect((640, 0), (446, 150), fill='#2196F3'))
     shapes.add(dwg.text('PHODAL', insert=(83, 119), fill='#FFFFFF', font_size=120, font_family='Helvetica'))
-    shapes.add(dwg.text('article', insert=(704, 122), fill='#FFFFFF', font_size=120, font_family='Helvetica'))
+    shapes.add(dwg.text('article', insert=(704, 119), fill='#FFFFFF', font_size=120, font_family='Helvetica'))
 
     dwg.save()
 
@@ -67,7 +67,7 @@ def generate_works():
 
     shapes.add(dwg.rect((0, 0), (640, 150), fill='#5E6772'))
     shapes.add(dwg.text('PHODAL', insert=(83, 119), fill='#FFFFFF', font_size=120, font_family='Helvetica'))
-    shapes.add(dwg.text('works', insert=(704, 122), fill='#FFFFFF', font_size=120, font_family='Helvetica'))
+    shapes.add(dwg.text('works', insert=(704, 119), fill='#FFFFFF', font_size=120, font_family='Helvetica'))
 
     dwg.save()
 
@@ -77,9 +77,9 @@ def generate_design():
 
     shapes = dwg.add(dwg.g(id='shapes', fill='none'))
     shapes.add(dwg.rect((0, 0), (640, 150), fill='#5E6772'))
-    shapes.add(dwg.rect((640, 0), (486, 150), fill='#2196F3'))
+    shapes.add(dwg.rect((640, 0), (486, 150), fill='#1abc9c'))
     shapes.add(dwg.text('PHODAL', insert=(83, 119), fill='#FFFFFF', font_size=120, font_family='Helvetica'))
-    shapes.add(dwg.text('design', insert=(704, 122), fill='#FFFFFF', font_size=120, font_family='Helvetica'))
+    shapes.add(dwg.text('design', insert=(704, 119), fill='#FFFFFF', font_size=120, font_family='Helvetica'))
 
     dwg.save()
 
@@ -111,12 +111,12 @@ def generate_cool_deisgn():
         for x in range(y_text_split + max_rect_length, width, max_rect_length):
             shapes.add(dwg.line((x - 4, y), (x + 4, y), stroke='#EEEEEE', stroke_width='2', stroke_opacity=0.4))
 
-    shapes.add(dwg.text('idea', insert=(920, 122), fill='#fff', font_size=120, font_family='Helvetica'))
+    shapes.add(dwg.text('idea', insert=(920, 119), fill='#fff', font_size=120, font_family='Helvetica'))
     dwg.save()
 
 
 generate_idea()
 generate_article()
-generate_works()
+#generate_works()
 generate_design()
 generate_cool_deisgn()
