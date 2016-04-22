@@ -39,9 +39,22 @@ def generate_article():
 
     shapes = dwg.add(dwg.g(id='shapes', fill='none'))
     shapes.add(dwg.rect((0, 0), (640, 150), fill='#5E6772'))
-    shapes.add(dwg.rect((640, 0), (446, 150), fill='#2196F3'))
     shapes.add(dwg.text('PHODAL', insert=(83, 119), fill='#FFFFFF', font_size=120, font_family='Helvetica'))
-    shapes.add(dwg.text('article', insert=(704, 119), fill='#FFFFFF', font_size=120, font_family='Helvetica'))
+
+    shapes.add(dwg.rect((640, 0), (446, 150), fill='#ffeb3b'))
+    shapes.add(dwg.text(insert=(640, 16), fill='#34495e', opacity=0.2, font_size=12, text='Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, fe-'))
+    shapes.add(dwg.text(insert=(640, 32), fill='#34495e', opacity=0.2, font_size=12, text='ugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi')) 
+    shapes.add(dwg.text(insert=(640, 48), fill='#34495e', opacity=0.2, font_size=12, text='vitae est. Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, ')) 
+    shapes.add(dwg.text(insert=(640, 64), fill='#34495e', opacity=0.2, font_size=12, text='condimentum sed, commodo vitae, ornare sit amet, wisi. Aenean fermentum, elit eget tincidunt condimentum, eros ipsum ')) 
+    shapes.add(dwg.text(insert=(640, 80), fill='#34495e', opacity=0.2, font_size=12, text='rutrum orci, sagittis tempus lacus enim ac dui. Donec non enim in turpis pulvinar facilisis. Ut felis. Praesent dapibus,')) 
+    shapes.add(dwg.text(insert=(640, 96), fill='#34495e', opacity=0.2, font_size=12, text=' neque id cursus faucibus, tortor neque egestas augue, eu vulputate magna eros eu erat. Aliquam erat volutpat. Nam dui mi,')) 
+    shapes.add(dwg.text(insert=(640, 112), fill='#34495e', opacity=0.2, font_size=12, text=' tincidunt quis, accumsan porttitor, facilisis luctus, metus'))
+    shapes.add(dwg.text(insert=(640, 128), fill='#34495e', opacity=0.2, font_size=12, text='Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus magna. Cras in mi at felis aliquet congue. Ut a est eget '))
+    shapes.add(dwg.text(insert=(640, 144), fill='#34495e', opacity=0.2, font_size=12, text='ligula molestie gravida. Curabitur massa. Donec eleifend, libero at sagittis mollis, tellus est malesuada tellus, at luctus '))
+    shapes.add(dwg.text(insert=(640, 160), fill='#34495e', opacity=0.2, font_size=12, text='turpis elit sit amet quam. Vivamus pretium ornare est.'))
+
+
+    shapes.add(dwg.text('article', insert=(704, 119), fill='#34495e', font_size=120, font_family='Helvetica'))
 
     dwg.save()
 
