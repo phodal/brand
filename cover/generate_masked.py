@@ -22,7 +22,7 @@ text = open(path.join(d, 'article.txt')).read()
 origin_image = Image.open(path.join(d, "map.png"))
 alice_mask = np.array(origin_image)
 
-wc = WordCloud(background_color="white", max_words=2000, mask=alice_mask,
+wc = WordCloud(background_color=None, max_words=2000, mask=alice_mask,
                width=1423, height=601, mode="RGBA")
 # generate word cloud
 wc.generate(text)
@@ -31,20 +31,7 @@ text_cloud_image = wc.to_image()
 
 text_cloud_image.save('out.png')
 
-img = text_cloud_image.convert("RGBA")
-datas = img.getdata()
-
-newData = []
-for item in datas:
-    if item[0] == 255 and item[1] == 255 and item[2] == 255:
-        newData.append((255, 255, 255, 0))
-    else:
-        newData.append(item)
-
-img.putdata(newData)
-img.show()
-
-origin_image.paste(img, (0, 0), img)
+origin_image.paste(text_cloud_image, (0, 0), text_cloud_image)
 origin_image.show()
 origin_image.save("bg.png", "PNG")
 

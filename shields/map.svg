@@ -1,11 +1,6 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <svg style="position: absolute; width: 1422px; height: 600px;" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:ev="http://www.w3.org/2001/xml-events" xmlns:xlink="http://www.w3.org/1999/xlink">
 	<desc>Phodal's Website Trafic</desc>
-	<g id="shapes">
-            <polygon id="Shape" stroke-opacity="0" stroke="#000000" fill-opacity="0" fill="#FFFFFF" points="0 0 1422 0 1422 600 0 600"></polygon>
-            <rect id="Rectangle-path" stroke-opacity="0.001" stroke="#5E6772" fill="#5E6772" x="0.5" y="0.5" width="1422" height="600"></rect>
-        </g>
-	<g/>
 	<g/>
 	<g/>
 	<g/>
