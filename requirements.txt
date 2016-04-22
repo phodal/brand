@@ -1,1 +1,2 @@
 svgwrite
+wordcoud==1.2.1
