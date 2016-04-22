@@ -63,19 +63,18 @@ def generate_cool_deisgn():
     shapes.add(dwg.text('PHODAL', insert=(-18, height), fill='#FFFFFF', font_size=210, font_family='Helvetica'))
 
     for x in range(y_text_split + rect_length, width, rect_length):
-        shapes.add(dwg.line((x, 0), (x, height), stroke='#EEEEEE'))
+        shapes.add(dwg.line((x, 0), (x, height), stroke='#EEEEEE', stroke_opacity=0.3))
 
     for y in range(rect_length, height, rect_length):
-        shapes.add(dwg.line((y_text_split, y), (width, y), stroke='#EEEEEE'))
+        shapes.add(dwg.line((y_text_split, y), (width, y), stroke='#EEEEEE', stroke_opacity=0.3))
 
     for x in range(y_text_split + max_rect_length, width, max_rect_length):
         for y in range(0, height, max_rect_length):
-            shapes.add(dwg.line((x, y - 3), (x, y + 3), stroke='#EEEEEE', stroke_width='3'))
+            shapes.add(dwg.line((x, y - 4), (x, y + 4), stroke='#EEEEEE', stroke_width='2', stroke_opacity=0.4))
 
     for y in range(0, height, max_rect_length):
         for x in range(y_text_split + max_rect_length, width, max_rect_length):
-            print x, y, max_rect_length
-            shapes.add(dwg.line((x - 3, y), (x + 3, y), stroke='#EEEEEE', stroke_width='3'))
+            shapes.add(dwg.line((x - 4, y), (x + 4, y), stroke='#EEEEEE', stroke_width='2', stroke_opacity=0.4))
 
     shapes.add(dwg.text('idea', insert=(920, 122), fill='#fff', font_size=120, font_family='Helvetica'))
     dwg.save()
