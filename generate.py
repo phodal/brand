@@ -58,11 +58,11 @@ def generate_works():
 
     shapes = dwg.add(dwg.g(id='shapes', fill='none'))
 
-    shapes.add(dwg.rect((640, 0), (426, 150), fill='#2196F3'))
+    shapes.add(dwg.rect((640, 0), (426, 150), fill='#2c3e50'))
     for x in range(0, 300, 10):
         text = get_some_random10(100)
         shapes.add(
-            dwg.text(text, insert=(641, x), fill='#FFFFFF', font_size=12, font_family='Inconsolata for Powerline',
+            dwg.text(text, insert=(641, x), fill='#27ae60', font_size=12, font_family='Inconsolata for Powerline',
                      opacity=0.3, transform="rotate(15 1200, 0)"))
 
     shapes.add(dwg.rect((0, 0), (640, 150), fill='#5E6772'))
