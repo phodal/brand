@@ -30,8 +30,9 @@ wc.generate(text)
 text_cloud_image = wc.to_image()
 
 text_cloud_image.save('out.png')
+image_with_bg = Image.open(path.join(d, "map_with_bg.png"))
 
-origin_image.paste(text_cloud_image, (0, 0), text_cloud_image)
-origin_image.show()
-origin_image.save("bg.png", "PNG")
+image_with_bg.paste(text_cloud_image, (0, 0), text_cloud_image)
+image_with_bg.show()
+image_with_bg.save("bg.png", "PNG")
 
