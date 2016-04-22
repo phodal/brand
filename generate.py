@@ -77,9 +77,13 @@ def generate_design():
 
     shapes = dwg.add(dwg.g(id='shapes', fill='none'))
     shapes.add(dwg.rect((0, 0), (640, 150), fill='#5E6772'))
-    shapes.add(dwg.rect((640, 0), (486, 150), fill='#1abc9c'))
-    shapes.add(dwg.text('PHODAL', insert=(83, 119), fill='#FFFFFF', font_size=120, font_family='Helvetica'))
+
+    shapes.add(dwg.rect((640, 90), (486, 150), fill='#03a9f4'))
+    shapes.add(dwg.text('design', insert=(706, 120), fill='#000', stroke_width=3, font_size=120, font_family='Helvetica'))
+    shapes.add(dwg.rect((640, 0), (486, 90), fill='#00bcd4'))
     shapes.add(dwg.text('design', insert=(704, 119), fill='#FFFFFF', font_size=120, font_family='Helvetica'))
+
+    shapes.add(dwg.text('PHODAL', insert=(83, 119), fill='#FFFFFF', font_size=120, font_family='Helvetica'))
 
     dwg.save()
 
