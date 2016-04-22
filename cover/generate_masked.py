@@ -6,11 +6,10 @@ Using a mask you can generate wordclouds in arbitrary shapes.
 """
 
 from os import path
-from PIL import Image
-import numpy as np
-import matplotlib.pyplot as plt
 
-from wordcloud import WordCloud, STOPWORDS
+import numpy as np
+from PIL import Image
+from wordcloud import WordCloud
 
 d = path.dirname(__file__)
 
@@ -20,20 +19,32 @@ text = open(path.join(d, 'article.txt')).read()
 # read the mask image
 # taken from
 # http://www.stencilry.org/stencils/movies/alice%20in%20wonderland/255fk.jpg
-alice_mask = np.array(Image.open(path.join(d, "map.png")))
+origin_image = Image.open(path.join(d, "map.png"))
+alice_mask = np.array(origin_image)
 
 wc = WordCloud(background_color="white", max_words=2000, mask=alice_mask,
-	width=1423, height=601, stopwords=STOPWORDS.add("said"))
+               width=1423, height=601, mode="RGBA")
 # generate word cloud
 wc.generate(text)
 
-# store to file
-wc.to_file(path.join(d, "alice.png"))
+text_cloud_image = wc.to_image()
 
-# show
-plt.imshow(wc)
-plt.axis("off")
-plt.figure()
-plt.imshow(alice_mask, cmap=plt.cm.gray)
-plt.axis("off")
-plt.show()
+text_cloud_image.save('out.png')
+
+img = text_cloud_image.convert("RGBA")
+datas = img.getdata()
+
+newData = []
+for item in datas:
+    if item[0] == 255 and item[1] == 255 and item[2] == 255:
+        newData.append((255, 255, 255, 0))
+    else:
+        newData.append(item)
+
+img.putdata(newData)
+img.show()
+
+origin_image.paste(img, (0, 0), img)
+origin_image.show()
+origin_image.save("bg.png", "PNG")
+
