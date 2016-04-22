@@ -78,22 +78,21 @@ def generate_design():
     shapes = dwg.add(dwg.g(id='shapes', fill='none'))
     shapes.add(dwg.rect((0, 0), (640, 150), fill='#5E6772'))
 
-    shapes.add(dwg.rect((640, 90), (486, 60), fill='#03a9f4'))
+    shapes.add(dwg.rect((640, 90), (486, 60), fill='#2196f3'))
     shapes.add(dwg.text('design', insert=(706, 120), fill='#000', stroke_width=4, font_size=120, font_family='Helvetica'))
-    shapes.add(dwg.rect((640, 0), (486, 90), fill='#00bcd4'))
+    shapes.add(dwg.rect((640, 0), (486, 90), fill='#03a9f4'))
     #shapes.add(dwg.rect((640, 88), (486, 3), fill='#e91e63'))
-    shapes.add(dwg.rect((640, 90), (486, 0.5), fill='#000'))
+    shapes.add(dwg.rect((640, 90), (486, 0.2), fill='#000'))
     shapes.add(dwg.text('design', insert=(704, 119), fill='#FFFFFF', font_size=120, font_family='Helvetica'))
 
     shapes.add(dwg.ellipse((912, 40), (9, 9), fill='#000'))
     shapes.add(dwg.ellipse((911, 39), (9, 9), fill='#f44336'))
 
-
     #for D Rect
-    shapes.add(dwg.line((700, 25), (700, 130), stroke='#EEEEEE', stroke_width='1', stroke_opacity=0.3, stroke_dasharray="3,3"))
-    shapes.add(dwg.line((770, 25), (770, 130), stroke='#EEEEEE', stroke_width='1', stroke_opacity=0.3, stroke_dasharray="3,3"))
-    shapes.add(dwg.line((700, 25), (770, 25), stroke='#EEEEEE', stroke_width='1', stroke_opacity=0.3, stroke_dasharray="3,3"))
-    shapes.add(dwg.line((700, 130), (770, 130), stroke='#EEEEEE', stroke_width='1', stroke_opacity=0.3, stroke_dasharray="3,3"))
+    shapes.add(dwg.line((700, 90), (700, 130), stroke='#EEEEEE', stroke_width='1', stroke_opacity=1, stroke_dasharray="2,2"))
+    shapes.add(dwg.line((770, 90), (770, 130), stroke='#EEEEEE', stroke_width='1', stroke_opacity=1, stroke_dasharray="2,2"))
+    #shapes.add(dwg.line((700, 25), (770, 25), stroke='#EEEEEE', stroke_width='1', stroke_opacity=1, stroke_dasharray="2,2"))
+    shapes.add(dwg.line((700, 130), (770, 130), stroke='#EEEEEE', stroke_width='1', stroke_opacity=1, stroke_dasharray="2,2"))
 
     shapes.add(dwg.text('PHODAL', insert=(83, 119), fill='#FFFFFF', font_size=120, font_family='Helvetica'))
 
