@@ -57,16 +57,17 @@ def generate_works():
     dwg = svgwrite.Drawing('shields/works.svg', size=(u'1066', u'150'))
 
     shapes = dwg.add(dwg.g(id='shapes', fill='none'))
-    shapes.add(dwg.rect((0, 0), (640, 150), fill='#5E6772'))
-    shapes.add(dwg.rect((640, 0), (426, 150), fill='#2196F3'))
-    shapes.add(dwg.text('PHODAL', insert=(83, 119), fill='#FFFFFF', font_size=120, font_family='Helvetica'))
-    shapes.add(dwg.text('works', insert=(704, 122), fill='#FFFFFF', font_size=120, font_family='Helvetica'))
 
-    for x in range(10, 160, 10):
+    shapes.add(dwg.rect((640, 0), (426, 150), fill='#2196F3'))
+    for x in range(0, 300, 10):
         text = get_some_random10(100)
         shapes.add(
             dwg.text(text, insert=(641, x), fill='#FFFFFF', font_size=12, font_family='Helvetica',
-                     opacity=0.3))
+                     opacity=0.3, transform="rotate(10 1000, 0)"))
+
+    shapes.add(dwg.rect((0, 0), (640, 150), fill='#5E6772'))
+    shapes.add(dwg.text('PHODAL', insert=(83, 119), fill='#FFFFFF', font_size=120, font_family='Helvetica'))
+    shapes.add(dwg.text('works', insert=(704, 122), fill='#FFFFFF', font_size=120, font_family='Helvetica'))
 
     dwg.save()
 
