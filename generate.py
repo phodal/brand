@@ -85,6 +85,10 @@ def generate_design():
     shapes.add(dwg.rect((640, 90), (486, 0.5), fill='#000'))
     shapes.add(dwg.text('design', insert=(704, 119), fill='#FFFFFF', font_size=120, font_family='Helvetica'))
 
+    shapes.add(dwg.ellipse((912, 40), (9, 9), fill='#000'))
+    shapes.add(dwg.ellipse((911, 39), (9, 9), fill='#f44336'))
+
+
     #for D Rect
     shapes.add(dwg.line((700, 25), (700, 130), stroke='#EEEEEE', stroke_width='1', stroke_opacity=0.3, stroke_dasharray="3,3"))
     shapes.add(dwg.line((770, 25), (770, 130), stroke='#EEEEEE', stroke_width='1', stroke_opacity=0.3, stroke_dasharray="3,3"))
