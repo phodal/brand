@@ -20,10 +20,10 @@ text = open(path.join(d, 'article.txt')).read()
 # read the mask image
 # taken from
 # http://www.stencilry.org/stencils/movies/alice%20in%20wonderland/255fk.jpg
-alice_mask = np.array(Image.open(path.join(d, "alice_mask.png")))
+alice_mask = np.array(Image.open(path.join(d, "map.png")))
 
 wc = WordCloud(background_color="white", max_words=2000, mask=alice_mask,
-               stopwords=STOPWORDS.add("said"))
+	width=1423, height=601, stopwords=STOPWORDS.add("said"))
 # generate word cloud
 wc.generate(text)
 
