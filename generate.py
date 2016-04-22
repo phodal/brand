@@ -1,3 +1,5 @@
+import random
+
 import svgwrite
 
 
@@ -44,6 +46,13 @@ def generate_article():
     dwg.save()
 
 
+def get_some_random10(num):
+    results = ''
+    for x in range(1, num):
+        results += str(random.getrandbits(1))
+    return results
+
+
 def generate_works():
     dwg = svgwrite.Drawing('shields/works.svg', size=(u'1066', u'150'))
 
@@ -52,6 +61,12 @@ def generate_works():
     shapes.add(dwg.rect((640, 0), (426, 150), fill='#2196F3'))
     shapes.add(dwg.text('PHODAL', insert=(83, 119), fill='#FFFFFF', font_size=120, font_family='Helvetica'))
     shapes.add(dwg.text('works', insert=(704, 122), fill='#FFFFFF', font_size=120, font_family='Helvetica'))
+
+    for x in range(10, 160, 10):
+        text = get_some_random10(100)
+        shapes.add(
+            dwg.text(text, insert=(641, x), fill='#FFFFFF', font_size=12, font_family='Helvetica',
+                     opacity=0.3))
 
     dwg.save()
 
