@@ -54,8 +54,14 @@ def generate_cool_deisgn():
   shapes.add(dwg.rect((0, 0), (841, 150), fill='#5E6772'))
   shapes.add(dwg.rect((841, 0), (366, 150), fill='#2196F3'))
   shapes.add(dwg.text('PHODAL', insert=(-18, 150), fill='#FFFFFF', font_size=210, font_family='Helvetica'))
-  shapes.add(dwg.text('idea', insert=(920, 122), fill='#FFFFFF', font_size=120, font_family='Helvetica'))
 
+  for x in range(861, 1206, 20):
+    shapes.add(dwg.line((x, 0), (x, 150), stroke='#EEEEEE'))
+
+  for y in range(20, 150, 20):
+    shapes.add(dwg.line((841, y), (1206, y), stroke='#EEEEEE'))
+
+  shapes.add(dwg.text('idea', insert=(920, 122), fill='#fff', font_size=120, font_family='Helvetica'))
   dwg.save()
 
 generate_idea()
