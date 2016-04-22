@@ -36,7 +36,7 @@ def generate_works():
   dwg.save()
 
 
-def generate_works():
+def generate_design():
   dwg = svgwrite.Drawing('shields/design.svg', size=(u'1126', u'150'))
 
   shapes = dwg.add(dwg.g(id='shapes', fill='none'))
@@ -47,7 +47,19 @@ def generate_works():
 
   dwg.save()
 
+def generate_cool_deisgn():
+  dwg = svgwrite.Drawing('shields/cool-idea.svg', profile='full', size=(u'1206', u'150'))
+
+  shapes = dwg.add(dwg.g(id='shapes', fill='none'))
+  shapes.add(dwg.rect((0, 0), (841, 150), fill='#5E6772'))
+  shapes.add(dwg.rect((841, 0), (366, 150), fill='#2196F3'))
+  shapes.add(dwg.text('PHODAL', insert=(-18, 150), fill='#FFFFFF', font_size=210, font_family='Helvetica'))
+  shapes.add(dwg.text('idea', insert=(920, 122), fill='#FFFFFF', font_size=120, font_family='Helvetica'))
+
+  dwg.save()
+
 generate_idea()
 generate_article()
 generate_works()
-generate_works()
+generate_design()
+generate_cool_deisgn()
