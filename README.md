@@ -49,6 +49,11 @@ Run:
 
 	python generate.py
 
+For Text Cloud:
+
+    touch ~/.matplotlib/matplotlibrc
+    echo "backend: TkAgg" >> ~/.matplotlib/matplotlibrc
+
 License
 ---	
 

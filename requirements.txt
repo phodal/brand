@@ -1,2 +1,4 @@
 svgwrite
-wordcoud==1.2.1
+wordcloud==1.2.1
+matplotlib==1.5.1
+pillow==3.2.0
