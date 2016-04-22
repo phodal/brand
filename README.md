@@ -37,6 +37,12 @@ Markdown:
 
 	[![Phodal's Article](http://brand.phodal.com/shields/works-small.png)](https://www.phodal.com/)
 
+[![Phodal's Design](http://brand.phodal.com/shields/design-small.png)](https://www.phodal.com/)
+
+Markdown:
+
+	[![Phodal's Design](http://brand.phodal.com/shields/design-small.png)](https://www.phodal.com/)
+
 
 Setup
 ---
