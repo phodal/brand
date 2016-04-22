@@ -62,8 +62,8 @@ def generate_works():
     for x in range(0, 300, 10):
         text = get_some_random10(100)
         shapes.add(
-            dwg.text(text, insert=(641, x), fill='#FFFFFF', font_size=12, font_family='Helvetica',
-                     opacity=0.3, transform="rotate(10 1000, 0)"))
+            dwg.text(text, insert=(641, x), fill='#FFFFFF', font_size=12, font_family='Inconsolata for Powerline',
+                     opacity=0.3, transform="rotate(15 1200, 0)"))
 
     shapes.add(dwg.rect((0, 0), (640, 150), fill='#5E6772'))
     shapes.add(dwg.text('PHODAL', insert=(83, 119), fill='#FFFFFF', font_size=120, font_family='Helvetica'))
