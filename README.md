@@ -56,7 +56,7 @@ Cover
 
 ![Phodal's Title](http://brand.phodal.com/titles/generate/cover/yellow.svg)
 ![Phodal's Title](http://brand.phodal.com/titles/generate/cover/blue.svg)
-![Phodal's Title](http://brand.phodal.com/titles/generate/cover/greensea..svg)
+![Phodal's Title](http://brand.phodal.com/titles/generate/cover/greensea.svg)
 
 Setup
 ---
