@@ -15,7 +15,7 @@ def generate_idea():
     shapes = dwg.add(dwg.g(id='shapes', fill='none'))
     shapes.add(dwg.rect((0, 0), (phodal_width, 150), fill='#5E6772'))
     shapes.add(dwg.rect((phodal_width, 0), (366, 150), fill='#2196F3'))
-    shapes.add(dwg.text('PHODAL', insert=(83, 119), fill='#FFFFFF', font_size=120, font_family='Helvetica'))
+    shapes.add(dwg.text('phodal', insert=(83, 119), fill='#FFFFFF', font_size=120, font_family='Helvetica'))
 
     for x in range(y_text_split + rect_length, width, rect_length):
         shapes.add(dwg.line((x, 0), (x, height), stroke='#EEEEEE', stroke_opacity=0.3))
@@ -40,7 +40,7 @@ def generate_article():
 
     shapes = dwg.add(dwg.g(id='shapes', fill='none'))
     shapes.add(dwg.rect((0, 0), (phodal_width, 150), fill='#5E6772'))
-    shapes.add(dwg.text('PHODAL', insert=(83, 119), fill='#FFFFFF', font_size=120, font_family='Helvetica'))
+    shapes.add(dwg.text('phodal', insert=(83, 119), fill='#FFFFFF', font_size=120, font_family='Helvetica'))
 
     shapes.add(dwg.rect((phodal_width, 0), (446, 150), fill='#ffeb3b'))
     shapes.add(dwg.text(insert=(phodal_width, 16), fill='#34495e', opacity=0.2, font_size=12, text='Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, fe-'))
@@ -80,9 +80,9 @@ def generate_works():
                      opacity=0.3, transform="rotate(15 1200, 0)"))
 
     shapes.add(dwg.rect((0, 0), (phodal_width, 150), fill='#5E6772'))
-    shapes.add(dwg.text('PHODAL', insert=(83, 119), fill='#FFFFFF', font_size=120, font_family='Helvetica'))
+    shapes.add(dwg.text('phodal', insert=(83, 119), fill='#FFFFFF', font_size=120, font_family='Helvetica'))
     shapes.add(dwg.text('works', insert=(704, 119), fill='#FFFFFF', font_size=120, font_family='Helvetica'))
-
+    
     dwg.save()
 
 
@@ -108,7 +108,7 @@ def generate_design():
     #shapes.add(dwg.line((700, 25), (770, 25), stroke='#EEEEEE', stroke_width='1', stroke_opacity=1, stroke_dasharray="2,2"))
     shapes.add(dwg.line((700, 130), (770, 130), stroke='#EEEEEE', stroke_width='1', stroke_opacity=1, stroke_dasharray="2,2"))
 
-    shapes.add(dwg.text('PHODAL', insert=(83, 119), fill='#FFFFFF', font_size=120, font_family='Helvetica'))
+    shapes.add(dwg.text('phodal', insert=(83, 119), fill='#FFFFFF', font_size=120, font_family='Helvetica'))
 
     dwg.save()
 
