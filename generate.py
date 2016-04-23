@@ -85,7 +85,7 @@ def get_some_random10(num):
 
 
 def generate_works():
-    dwg = svgwrite.Drawing('shields/works.svg', size=(u'1066', u'150'))
+    dwg = svgwrite.Drawing('shields/works.svg', size=(u'950', u'150'))
 
     shapes = dwg.add(dwg.g(id='shapes', fill='none'))
 
@@ -95,11 +95,11 @@ def generate_works():
         shapes.add(
             dwg.text(text, insert=(phodal_width + 1, x), fill='#27ae60', font_size=12,
                      font_family='Inconsolata for Powerline',
-                     opacity=0.3, transform="rotate(15 1200, 0)"))
+                     opacity=0.3, transform="rotate(15 1000, 0)"))
 
     shapes.add(dwg.rect((0, 0), (phodal_width, 150), fill='#5E6772'))
     shapes.add(dwg.text('phodal', insert=(83, basic_text_y), fill='#FFFFFF', font_size=120, font_family='Helvetica'))
-    shapes.add(dwg.text('works', insert=(704, basic_text_y), fill='#FFFFFF', font_size=120, font_family='Helvetica'))
+    shapes.add(dwg.text('works', insert=(secondary_text_x, basic_text_y), fill='#FFFFFF', font_size=120, font_family='Helvetica'))
 
     dwg.save()
 
@@ -148,5 +148,5 @@ def generate_design():
 
 generate_idea()
 generate_article()
-# generate_works()
+generate_works()
 generate_design()
