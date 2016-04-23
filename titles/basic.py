@@ -3,7 +3,7 @@ import svgwrite
 
 
 def generate_works():
-    dwg = svgwrite.Drawing('basic.svg', size=(u'1200', u'600'))
+    dwg = svgwrite.Drawing('generate/basic.svg', size=(u'1200', u'600'))
 
     shapes = dwg.add(dwg.g(id='shapes', fill='none'))
 
