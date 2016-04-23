@@ -15,7 +15,8 @@ def generate_title_by_colors(color_name, bg_color, font_color):
     shapes = dwg.add(dwg.g(id='shapes', fill='none'))
 
     shapes.add(dwg.rect((0, 0), (950, 500), fill='#' + bg_color))
-    shapes.add(dwg.text('JavaScript', insert=(475, 190), fill='#' + font_color, font_size=120, style="text-anchor: middle; dominant-baseline: hanging;",
+    shapes.add(dwg.text('JavaScript', insert=(475, 190), fill='#' + font_color, font_size=120,
+                        style="text-anchor: middle; dominant-baseline: hanging;",
                         font_family='Helvetica'))
 
     dwg.save()
@@ -57,6 +58,7 @@ def generate_article_title(color_name, bg_color, font_color):
 
     dwg.save()
 
+
 def generate_article_titles():
     for color_name, color in ConfigColor.items('Color'):
         bg_color = color.replace('#', '').split(',')[0]
@@ -64,6 +66,7 @@ def generate_article_titles():
 
         generate_article_title(color_name, bg_color, font_color)
 
+
 if __name__ == '__main__':
-    #generate_cover_titles()
+    generate_cover_titles()
     generate_article_titles()
