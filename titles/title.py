@@ -9,7 +9,7 @@ bg_colors = []
 font_colors = []
 
 
-def generate_works(color_name, bg_color, font_color):
+def generate_title_by_colors(color_name, bg_color, font_color):
     dwg = svgwrite.Drawing('generate/titles/' + color_name + '.svg', size=(u'950', u'500'))
 
     shapes = dwg.add(dwg.g(id='shapes', fill='none'))
@@ -21,9 +21,13 @@ def generate_works(color_name, bg_color, font_color):
     dwg.save()
 
 
-if __name__ == '__main__':
+def generate_cover_titles():
     for color_name, color in ConfigColor.items('Color'):
         bg_color = color.replace('#', '').split(',')[0]
         font_color = color.replace('#', '').split(',')[1]
 
-        generate_works(color_name, bg_color, font_color)
+        generate_title_by_colors(color_name, bg_color, font_color)
+
+
+if __name__ == '__main__':
+    generate_cover_titles()
