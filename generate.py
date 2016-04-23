@@ -105,21 +105,22 @@ def generate_works():
 
 
 def generate_design():
-    dwg = svgwrite.Drawing('shields/design.svg', size=(u'1000', u'150'))
+    dwg = svgwrite.Drawing('shields/design.svg', size=(u'1014', u'150'))
 
     # for D Rect
     red_point = 798
+    design_width = 486
 
     shapes = dwg.add(dwg.g(id='shapes', fill='none'))
     shapes.add(dwg.rect((0, 0), (phodal_width, 150), fill='#5E6772'))
 
     def draw_design_word():
-        shapes.add(dwg.rect((phodal_width, 90), (486, 60), fill='#2196f3'))
+        shapes.add(dwg.rect((phodal_width, 90), (design_width, 60), fill='#2196f3'))
         shapes.add(dwg.text('design', insert=(secondary_text_x + 6, 120), fill='#000', stroke_width=4, font_size=120,
                             font_family='Helvetica'))
-        shapes.add(dwg.rect((phodal_width, 0), (486, 90), fill='#03a9f4'))
+        shapes.add(dwg.rect((phodal_width, 0), (design_width, 90), fill='#03a9f4'))
         # shapes.add(dwg.rect((phodal_width, 88), (486, 3), fill='#e91e63'))
-        shapes.add(dwg.rect((phodal_width, 90), (486, 0.2), fill='#000'))
+        shapes.add(dwg.rect((phodal_width, 90), (design_width, 0.2), fill='#000'))
         shapes.add(dwg.text('design', insert=(secondary_text_x + 4, basic_text_y), fill='#FFFFFF', font_size=120,
                             font_family='Helvetica'))
 
