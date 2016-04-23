@@ -1,0 +1,36 @@
+#!/usr/bin/env python2
+from os import path
+
+import numpy as np
+from PIL import Image
+from wordcloud import WordCloud
+
+d = path.dirname(__file__)
+
+text = open(path.join(d, 'lang.txt')).read()
+
+origin_image = Image.open(path.join(d, "map.png"))
+img = origin_image.convert("RGBA")
+datas = img.getdata()
+
+newData = []
+bg_color = datas[0]
+for item in datas:
+    if item[0] == bg_color[0] and item[1] == bg_color[1] and item[2] == bg_color[2]:
+        newData.append((255, 255, 255, 0))
+    else:
+        newData.append(item)
+
+img.putdata(newData)
+
+alice_mask = np.array(img)
+
+wc = WordCloud(background_color=None, max_words=2000, mask=alice_mask, max_font_size=6,
+               width=1423, height=601, mode="RGBA")
+# generate word cloud
+wc.generate(text)
+
+text_cloud_image = wc.to_image()
+
+text_cloud_image.show()
+text_cloud_image.save('out.png')
