@@ -1,3 +1,4 @@
 cover/*.png
 */*.pyc
 titles/generate/titles
+titles/generate/cover
