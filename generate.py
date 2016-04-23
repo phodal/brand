@@ -44,7 +44,7 @@ def generate_idea():
 
 
 def generate_article():
-    dwg = svgwrite.Drawing('shields/article.svg', size=(u'1086', u'150'))
+    dwg = svgwrite.Drawing('shields/article.svg', size=(u'970', u'150'))
 
     shapes = dwg.add(dwg.g(id='shapes', fill='none'))
     shapes.add(dwg.rect((0, 0), (phodal_width, 150), fill='#5E6772'))
@@ -72,7 +72,7 @@ def generate_article():
     shapes.add(dwg.text(insert=(phodal_width, 160), fill='#34495e', opacity=0.2, font_size=12,
                         text='turpis elit sit amet quam. Vivamus pretium ornare est.'))
 
-    shapes.add(dwg.text('article', insert=(704, basic_text_y), fill='#34495e', font_size=120, font_family='Helvetica'))
+    shapes.add(dwg.text('article', insert=(secondary_text_x, basic_text_y), fill='#34495e', font_size=120, font_family='Helvetica'))
 
     dwg.save()
 
@@ -148,5 +148,5 @@ def generate_design():
 
 generate_idea()
 generate_article()
-generate_works()
+#generate_works()
 generate_design()
