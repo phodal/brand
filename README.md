@@ -44,6 +44,19 @@ Markdown:
 
 	[![Phodal's Design](http://brand.phodal.com/shields/design-small.png)](https://www.phodal.com/)
 
+Titles 
+---
+
+![Phodal's Title](http://brand.phodal.com/titles/generate/titles/yellow.svg)
+![Phodal's Title](http://brand.phodal.com/titles/generate/titles/pumpkin.svg)
+![Phodal's Title](http://brand.phodal.com/titles/generate/titles/silver.svg)
+
+Cover
+---
+
+![Phodal's Title](http://brand.phodal.com/titles/generate/cover/yellow.svg)
+![Phodal's Title](http://brand.phodal.com/titles/generate/cover/blue.svg)
+![Phodal's Title](http://brand.phodal.com/titles/generate/cover/greensea..svg)
 
 Setup
 ---
