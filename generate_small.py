@@ -11,13 +11,13 @@ def generate_idea():
     y_text_split = phodal_width + 1
     height = 50
     rect_length = 2
-    width = 327
+    width = 290
     max_rect_length = 10
 
     dwg = svgwrite.Drawing('shields/idea-small.svg', profile='full', size=(u'290', u'50'))
 
-    a_mask = dwg.mask((0, 0), (290, height), id='a')
-    a_mask.add(dwg.rect((0, 0), (290, height), fill='#eee', rx=3))
+    a_mask = dwg.mask((0, 0), (width, height), id='a')
+    a_mask.add(dwg.rect((0, 0), (width, height), fill='#eee', rx=3))
     dwg.add(a_mask)
 
     g = dwg.add(dwg.g(id='g', fill='none', mask='url(#a)'))
@@ -26,7 +26,8 @@ def generate_idea():
 
     shapes = dwg.add(dwg.g(id='shapes', fill='none'))
 
-    shapes.add(dwg.text('phodal', insert=(28, basic_text_y + 1), fill='#000', fill_opacity=0.3, font_size=40, font_family='Helvetica'))
+    shapes.add(dwg.text('phodal', insert=(28, basic_text_y + 1), fill='#000', fill_opacity=0.3, font_size=40,
+                        font_family='Helvetica'))
     shapes.add(dwg.text('phodal', insert=(27, basic_text_y), fill='#FFFFFF', font_size=40, font_family='Helvetica'))
 
     def draw_for_bg_plus():
@@ -34,7 +35,8 @@ def generate_idea():
             shapes.add(dwg.line((x, 0), (x, height), stroke='#EEEEEE', stroke_width='0.5', stroke_opacity=0.1))
 
         for y in range(rect_length, height, rect_length):
-            shapes.add(dwg.line((y_text_split, y), (width, y), stroke='#EEEEEE', stroke_width='0.5', stroke_opacity=0.1))
+            shapes.add(
+                dwg.line((y_text_split, y), (width, y), stroke='#EEEEEE', stroke_width='0.5', stroke_opacity=0.1))
 
         for x in range(y_text_split + max_rect_length, width, max_rect_length):
             for y in range(0, height, max_rect_length):
@@ -46,8 +48,9 @@ def generate_idea():
 
     draw_for_bg_plus()
 
-    shapes.add(dwg.text('idea', insert=(secondary_text_x + 1, basic_text_y + 1), fill='#000', font_size=40, fill_opacity=0.3,
-                        font_family='Helvetica'))
+    shapes.add(
+        dwg.text('idea', insert=(secondary_text_x + 1, basic_text_y + 1), fill='#000', font_size=40, fill_opacity=0.3,
+                 font_family='Helvetica'))
     shapes.add(dwg.text('idea', insert=(secondary_text_x, basic_text_y), fill='#FFFFFF', font_size=40,
                         font_family='Helvetica'))
     dwg.save()
@@ -56,13 +59,22 @@ def generate_idea():
 def generate_article():
     dwg = svgwrite.Drawing('shields/article-small.svg', size=(u'323', u'50'))
 
+    height = 50
+    width = 323
+
+    a_mask = dwg.mask((0, 0), (width, height), id='a')
+    a_mask.add(dwg.rect((0, 0), (width, height), fill='#eee', rx=3))
+    dwg.add(a_mask)
+
+    g = dwg.add(dwg.g(id='g', fill='none', mask='url(#a)'))
+    g.add(dwg.rect((0, 0), (phodal_width, height), fill='#5E6772'))
+    g.add(dwg.rect((phodal_width, 0), (width - phodal_width, height), fill='#ffeb3b'))
+
     shapes = dwg.add(dwg.g(id='shapes', fill='none'))
-    shapes.add(dwg.rect((0, 0), (phodal_width, 150), fill='#5E6772'))
     shapes.add(dwg.text('phodal', insert=(28, basic_text_y + 1), fill='#000', fill_opacity=0.3, font_size=40,
                         font_family='Helvetica'))
     shapes.add(dwg.text('phodal', insert=(27, basic_text_y), fill='#FFFFFF', font_size=40, font_family='Helvetica'))
 
-    shapes.add(dwg.rect((phodal_width, 0), (446, 150), fill='#ffeb3b'))
     shapes.add(dwg.text(insert=(phodal_width, 6), fill='#34495e', opacity=0.2, font_size=4,
                         text='Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, fe-'))
     shapes.add(dwg.text(insert=(phodal_width, 12), fill='#34495e', opacity=0.2, font_size=4,
@@ -84,8 +96,10 @@ def generate_article():
     shapes.add(dwg.text(insert=(phodal_width, 60), fill='#34495e', opacity=0.2, font_size=4,
                         text='turpis elit sit amet quam. Vivamus pretium ornare est.'))
 
-    shapes.add(dwg.text('article', insert=(secondary_text_x + 1, basic_text_y + 1), fill='#000', fill_opacity=0.3, font_size=40, font_family='Helvetica'))
-    shapes.add(dwg.text('article', insert=(secondary_text_x, basic_text_y), fill='#34495e', font_size=40, font_family='Helvetica'))
+    shapes.add(dwg.text('article', insert=(secondary_text_x + 1, basic_text_y + 1), fill='#000', fill_opacity=0.3,
+                        font_size=40, font_family='Helvetica'))
+    shapes.add(dwg.text('article', insert=(secondary_text_x, basic_text_y), fill='#34495e', font_size=40,
+                        font_family='Helvetica'))
 
     dwg.save()
 
@@ -114,8 +128,11 @@ def generate_works():
     shapes.add(dwg.text('phodal', insert=(28, basic_text_y + 1), fill='#000', fill_opacity=0.3, font_size=40,
                         font_family='Helvetica'))
     shapes.add(dwg.text('phodal', insert=(27, basic_text_y), fill='#FFFFFF', font_size=40, font_family='Helvetica'))
-    shapes.add(dwg.text('works', insert=(secondary_text_x + 1, basic_text_y + 1), fill='#000', fill_opacity=0.3, font_size=40, font_family='Helvetica'))
-    shapes.add(dwg.text('works', insert=(secondary_text_x, basic_text_y), fill='#FFFFFF', font_size=40, font_family='Helvetica'))
+    shapes.add(
+        dwg.text('works', insert=(secondary_text_x + 1, basic_text_y + 1), fill='#000', fill_opacity=0.3, font_size=40,
+                 font_family='Helvetica'))
+    shapes.add(dwg.text('works', insert=(secondary_text_x, basic_text_y), fill='#FFFFFF', font_size=40,
+                        font_family='Helvetica'))
 
     dwg.save()
 
@@ -156,5 +173,5 @@ def generate_design():
 
 generate_idea()
 generate_article()
-#generate_works()
+# generate_works()
 generate_design()
