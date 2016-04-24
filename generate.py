@@ -19,6 +19,8 @@ def generate_idea():
     shapes = dwg.add(dwg.g(id='shapes', fill='none'))
     shapes.add(dwg.rect((0, 0), (phodal_width, height), fill='#5E6772'))
     shapes.add(dwg.rect((phodal_width, 0), (width - phodal_width, height), fill='#2196F3'))
+    shapes.add(dwg.text('phodal', insert=(84, basic_text_y + 1), fill='#000', fill_opacity=0.3, font_size=120,
+                        font_family='Helvetica'))
     shapes.add(dwg.text('phodal', insert=(83, basic_text_y), fill='#FFFFFF', font_size=120, font_family='Helvetica'))
 
     def draw_for_bg_plus():
@@ -38,6 +40,9 @@ def generate_idea():
 
     draw_for_bg_plus()
 
+    shapes.add(
+        dwg.text('idea', insert=(secondary_text_x + 1, basic_text_y + 1), fill='#000', fill_opacity=0.3, font_size=120,
+                 font_family='Helvetica'))
     shapes.add(dwg.text('idea', insert=(secondary_text_x, basic_text_y), fill='#FFFFFF', font_size=120,
                         font_family='Helvetica'))
     dwg.save()
@@ -48,6 +53,8 @@ def generate_article():
 
     shapes = dwg.add(dwg.g(id='shapes', fill='none'))
     shapes.add(dwg.rect((0, 0), (phodal_width, 150), fill='#5E6772'))
+    shapes.add(dwg.text('phodal', insert=(84, basic_text_y + 1), fill='#000', fill_opacity=0.3, font_size=120,
+                        font_family='Helvetica'))
     shapes.add(dwg.text('phodal', insert=(83, basic_text_y), fill='#FFFFFF', font_size=120, font_family='Helvetica'))
 
     shapes.add(dwg.rect((phodal_width, 0), (446, 150), fill='#ffeb3b'))
@@ -72,7 +79,10 @@ def generate_article():
     shapes.add(dwg.text(insert=(phodal_width, 160), fill='#34495e', opacity=0.2, font_size=12,
                         text='turpis elit sit amet quam. Vivamus pretium ornare est.'))
 
-    shapes.add(dwg.text('article', insert=(secondary_text_x, basic_text_y), fill='#34495e', font_size=120, font_family='Helvetica'))
+    shapes.add(dwg.text('article', insert=(secondary_text_x + 1, basic_text_y + 1), fill='#000', fill_opacity=0.3,
+                        font_size=120, font_family='Helvetica'))
+    shapes.add(dwg.text('article', insert=(secondary_text_x, basic_text_y), fill='#34495e', font_size=120,
+                        font_family='Helvetica'))
 
     dwg.save()
 
@@ -98,8 +108,14 @@ def generate_works():
                      opacity=0.3, transform="rotate(15 1000, 0)"))
 
     shapes.add(dwg.rect((0, 0), (phodal_width, 150), fill='#5E6772'))
+    shapes.add(dwg.text('phodal', insert=(84, basic_text_y + 1), fill='#000', fill_opacity=0.3, font_size=120,
+                        font_family='Helvetica'))
     shapes.add(dwg.text('phodal', insert=(83, basic_text_y), fill='#FFFFFF', font_size=120, font_family='Helvetica'))
-    shapes.add(dwg.text('works', insert=(secondary_text_x, basic_text_y), fill='#FFFFFF', font_size=120, font_family='Helvetica'))
+
+    shapes.add(dwg.text('works', insert=(secondary_text_x + 1, basic_text_y + 1), fill='#FFFFFF', font_size=120,
+                        font_family='Helvetica'))
+    shapes.add(dwg.text('works', insert=(secondary_text_x, basic_text_y), fill='#FFFFFF', font_size=120,
+                        font_family='Helvetica'))
 
     dwg.save()
 
@@ -142,6 +158,7 @@ def generate_design():
     draw_red_point()
     draw_d_arround()
 
+    shapes.add(dwg.text('phodal', insert=(84, basic_text_y + 1), fill='#000', fill_opacity=0.3, font_size=120, font_family='Helvetica'))
     shapes.add(dwg.text('phodal', insert=(83, basic_text_y), fill='#FFFFFF', font_size=120, font_family='Helvetica'))
 
     dwg.save()
