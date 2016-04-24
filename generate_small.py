@@ -115,12 +115,12 @@ def generate_design():
     shapes.add(dwg.rect((0, 0), (phodal_width, 50), fill='#5E6772'))
 
     def draw_design_word():
-        shapes.add(dwg.rect((phodal_width, 30), (design_width, 20), fill='#2196f3'))
+        shapes.add(dwg.rect((phodal_width, 25.6), (design_width, 30), fill='#2196f3'))
         shapes.add(dwg.text('design', insert=(secondary_text_x + 5, 36), fill='#000', stroke_width=4, font_size=40,
                             font_family='Helvetica'))
-        shapes.add(dwg.rect((phodal_width, 0), (design_width, 30), fill='#03a9f4'))
+        shapes.add(dwg.rect((phodal_width, 0), (design_width, 26), fill='#03a9f4'))
         # shapes.add(dwg.rect((phodal_width, 88), (486, 3), fill='#e91e63'))
-        shapes.add(dwg.rect((phodal_width, 30), (design_width, 0.2), fill='#000'))
+        shapes.add(dwg.rect((phodal_width, 25.6), (design_width, 0.6), fill='#000'))
         shapes.add(dwg.text('design', insert=(secondary_text_x + 4, basic_text_y), fill='#FFFFFF', font_size=40,
                             font_family='Helvetica'))
 
