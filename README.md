@@ -77,7 +77,7 @@ For Text Cloud:
 License
 ---
 
-[![Phodal's Idea](http://brand.phodal.com/shields/idea-small.png)](http://ideas.phodal.com/)
+[![Phodal's Idea](http://brand.phodal.com/shields/idea-small.svg)](http://ideas.phodal.com/)
 
 © 2016 [Phodal Huang](https://www.phodal.com)'s [Idea](http://github.com/phodal/ideas).  This code is distributed under the MIT license. See `LICENSE` in this directory.
 
