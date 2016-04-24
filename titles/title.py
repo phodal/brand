@@ -38,7 +38,7 @@ def generate_article_title(color_name, bg_color, font_color):
 
     shapes = dwg.add(dwg.g(id='shapes', fill='none'))
 
-    shapes.add(dwg.rect((0, 0), (950, 500), fill=bg_color))
+    shapes.add(dwg.rect((0, 0), (950, 300), fill=bg_color))
     shapes.add(dwg.text('PHODAL', insert=(475, 50), fill=font_color, font_size=22,
                         style="text-anchor: middle; dominant-baseline: hanging;",
                         font_family='Helvetica'))
