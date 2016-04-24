@@ -16,9 +16,16 @@ def generate_idea():
 
     dwg = svgwrite.Drawing('shields/idea-small.svg', profile='full', size=(u'290', u'50'))
 
+    a_mask = dwg.mask((0, 0), (290, height), id='a')
+    a_mask.add(dwg.rect((0, 0), (290, height), fill='#eee', rx=3))
+    dwg.add(a_mask)
+
+    g = dwg.add(dwg.g(id='g', fill='none', mask='url(#a)'))
+    g.add(dwg.rect((0, 0), (phodal_width, height), fill='#5E6772'))
+    g.add(dwg.rect((phodal_width, 0), (width - phodal_width, height), fill='#2196F3'))
+
     shapes = dwg.add(dwg.g(id='shapes', fill='none'))
-    shapes.add(dwg.rect((0, 0), (phodal_width, height), fill='#5E6772'))
-    shapes.add(dwg.rect((phodal_width, 0), (width - phodal_width, height), fill='#2196F3'))
+
     shapes.add(dwg.text('phodal', insert=(28, basic_text_y + 1), fill='#000', fill_opacity=0.3, font_size=40, font_family='Helvetica'))
     shapes.add(dwg.text('phodal', insert=(27, basic_text_y), fill='#FFFFFF', font_size=40, font_family='Helvetica'))
 
