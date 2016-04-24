@@ -14,7 +14,7 @@ def generate_idea():
     width = 327
     max_rect_length = 10
 
-    dwg = svgwrite.Drawing('shields/idea-small.svg', profile='full', size=(u'327', u'50'))
+    dwg = svgwrite.Drawing('shields/idea-small.svg', profile='full', size=(u'290', u'50'))
 
     shapes = dwg.add(dwg.g(id='shapes', fill='none'))
     shapes.add(dwg.rect((0, 0), (phodal_width, height), fill='#5E6772'))
@@ -23,22 +23,22 @@ def generate_idea():
 
     def draw_for_bg_plus():
         for x in range(y_text_split + rect_length, width, rect_length):
-            shapes.add(dwg.line((x, 0), (x, height), stroke='#EEEEEE', stroke_width='0.5', stroke_opacity=0.3))
+            shapes.add(dwg.line((x, 0), (x, height), stroke='#EEEEEE', stroke_width='0.5', stroke_opacity=0.1))
 
         for y in range(rect_length, height, rect_length):
-            shapes.add(dwg.line((y_text_split, y), (width, y), stroke='#EEEEEE', stroke_width='0.5', stroke_opacity=0.3))
+            shapes.add(dwg.line((y_text_split, y), (width, y), stroke='#EEEEEE', stroke_width='0.5', stroke_opacity=0.1))
 
         for x in range(y_text_split + max_rect_length, width, max_rect_length):
             for y in range(0, height, max_rect_length):
-                shapes.add(dwg.line((x, y - 2), (x, y + 2), stroke='#EEEEEE', stroke_width='1', stroke_opacity=0.4))
+                shapes.add(dwg.line((x, y - 2), (x, y + 2), stroke='#EEEEEE', stroke_width='0.8', stroke_opacity=0.15))
 
         for y in range(0, height, max_rect_length):
             for x in range(y_text_split + max_rect_length, width, max_rect_length):
-                shapes.add(dwg.line((x - 2, y), (x + 2, y), stroke='#EEEEEE', stroke_width='1', stroke_opacity=0.4))
+                shapes.add(dwg.line((x - 2, y), (x + 2, y), stroke='#EEEEEE', stroke_width='0.8', stroke_opacity=0.15))
 
     draw_for_bg_plus()
 
-    shapes.add(dwg.text('idea', insert=(secondary_text_x + 24, basic_text_y), fill='#FFFFFF', font_size=40,
+    shapes.add(dwg.text('idea', insert=(secondary_text_x, basic_text_y), fill='#FFFFFF', font_size=40,
                         font_family='Helvetica'))
     dwg.save()
 
