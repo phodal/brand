@@ -20,29 +20,29 @@ Map
 Usage
 ---
 
-[![Phodal's Idea](http://brand.phodal.com/shields/idea-small.png)](http://ideas.phodal.com/)
+[![Phodal's Idea](http://brand.phodal.com/shields/idea-small.svg)](http://ideas.phodal.com/)
 
 Markdown:
 
-    [![Phodal's Idea](http://brand.phodal.com/shields/idea-small.png)](http://ideas.phodal.com/)
+    [![Phodal's Idea](http://brand.phodal.com/shields/idea-small.svg)](http://ideas.phodal.com/)
 
-[![Phodal's Article](http://brand.phodal.com/shields/article-small.png)](https://www.phodal.com/)
-
-Markdown:
-
-	[![Phodal's Article](http://brand.phodal.com/shields/article-small.png)](https://www.phodal.com/)
-
-[![Phodal's Article](http://brand.phodal.com/shields/works-small.png)](https://www.phodal.com/)
+[![Phodal's Article](http://brand.phodal.com/shields/article-small.svg)](https://www.phodal.com/)
 
 Markdown:
 
-	[![Phodal's Article](http://brand.phodal.com/shields/works-small.png)](https://www.phodal.com/)
+	[![Phodal's Article](http://brand.phodal.com/shields/article-small.svg)](https://www.phodal.com/)
 
-[![Phodal's Design](http://brand.phodal.com/shields/design-small.png)](https://www.phodal.com/)
+[![Phodal's Article](http://brand.phodal.com/shields/works-small.svg)](https://www.phodal.com/)
 
 Markdown:
 
-	[![Phodal's Design](http://brand.phodal.com/shields/design-small.png)](https://www.phodal.com/)
+	[![Phodal's Article](http://brand.phodal.com/shields/works-small.svg)](https://www.phodal.com/)
+
+[![Phodal's Design](http://brand.phodal.com/shields/design-small.svg)](https://www.phodal.com/)
+
+Markdown:
+
+	[![Phodal's Design](http://brand.phodal.com/shields/design-small.svg)](https://www.phodal.com/)
 
 Titles 
 ---
