@@ -206,5 +206,5 @@ def generate_design():
 
 generate_idea()
 generate_article()
-generate_works()
+#generate_works()
 generate_design()
