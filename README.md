@@ -15,7 +15,7 @@ Map
 
 (Seems not works in GitHub)
 
-[![Phodal's Map](http://brand.phodal.com/backgrounds/map_with_bg.png)](http://brand.phodal.com/shields/map.svg)
+[![Phodal's Map](http://brand.phodal.com/backgrounds/map.svg)](http://brand.phodal.com/backgrounds/map.svg)
 
 Usage
 ---
