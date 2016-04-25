@@ -15,13 +15,13 @@ def generate_slogan():
 
     g = dwg.add(dwg.g(id='g', fill='none', mask='url(#a)'))
     g.add(dwg.rect((0, 0), (width / 3, height), fill='#03a9f4'))
-    g.add(dwg.rect((width / 3, 0), (width / 3, height), fill='#f44336'))
+    g.add(dwg.rect((width / 3, 0), (width / 3, height), fill='#e91e63'))
     g.add(dwg.rect((width * 2 / 3, 0), (width * 2 / 3, height), fill='#ecf0f1'))
 
     shapes = dwg.add(dwg.g(id='shapes', fill='none'))
-    shapes.add(dwg.text('待我代码编成', insert=(10, 35), fill='#ecf0f1', font_size=30, font_family='Helvetica'))
-    shapes.add(dwg.text('娶你为妻可好', insert=(210, 35), fill='#fff', font_size=30, font_family='Helvetica'))
-    shapes.add(dwg.text('@hug8217', insert=(420, 35), fill='#34495e', font_size=30, font_family='Helvetica'))
+    shapes.add(dwg.text('待我代码编成', insert=(10, 35), fill='#fff', font_size=30, font_family='STFangSong'))
+    shapes.add(dwg.text('娶你为妻可好', insert=(210, 35), fill='#fff', font_size=30, font_family='STFangSong'))
+    shapes.add(dwg.text('@hug8217', insert=(430, 35), fill='#34495e', font_size=30))
 
     dwg.save()
 
