@@ -25,7 +25,7 @@ def generate_slogan():
     dwg.add(slogan_link)
 
     link = Hyperlink('http://www.hug8217.com/', target='_blank')
-    link.add(dwg.text('@花仲马', insert=(410, 35), fill='#34495e', font_size=30))
+    link.add(dwg.text('@花仲马', insert=(410, 35), fill='#34495e', font_size=30, font_family='STFangSong'))
 
     dwg.add(link)
 
