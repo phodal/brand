@@ -113,7 +113,7 @@ def get_some_random10(num):
 
 def generate_works():
     width = 316
-    height = 50;
+    height = 50
 
     dwg = svgwrite.Drawing('shields/works-small.svg', size=(u'316', u'50'))
 
@@ -134,7 +134,7 @@ def generate_works():
                      opacity=0.3, transform="rotate(15 300, 0)"))
 
     g.add(dwg.rect((0, 0), (phodal_width, height), fill='#5E6772'))
-    
+
     shapes.add(dwg.text('phodal', insert=(28, basic_text_y + 1), fill='#000', fill_opacity=0.3, font_size=40,
                         font_family='Helvetica'))
     shapes.add(dwg.text('phodal', insert=(27, basic_text_y), fill='#FFFFFF', font_size=40, font_family='Helvetica'))
@@ -148,30 +148,36 @@ def generate_works():
 
 
 def generate_design():
-    dwg = svgwrite.Drawing('shields/design-small.svg', size=(u'338', u'50'))
-
     # for D Rect
     red_point = 272
     design_width = 162
+    width = 338
+    height = 50
+
+    dwg = svgwrite.Drawing('shields/design-small.svg', size=(u'338', u'50'))
+    a_mask = dwg.mask((0, 0), (width, height), id='a')
+    a_mask.add(dwg.rect((0, 0), (width, height), fill='#eee', rx=3))
+
+    dwg.add(a_mask)
+    g = dwg.add(dwg.g(id='g', fill='none', mask='url(#a)'))
 
     shapes = dwg.add(dwg.g(id='shapes', fill='none'))
-    shapes.add(dwg.rect((0, 0), (phodal_width, 50), fill='#5E6772'))
 
-    def draw_design_word():
-        shapes.add(dwg.rect((phodal_width, 25.6), (design_width, 30), fill='#2196f3'))
-        shapes.add(dwg.text('design', insert=(secondary_text_x + 5, 36), fill='#000', stroke_width=4, font_size=40,
-                            font_family='Helvetica'))
-        shapes.add(dwg.rect((phodal_width, 0), (design_width, 26), fill='#03a9f4'))
-        # shapes.add(dwg.rect((phodal_width, 88), (486, 3), fill='#e91e63'))
-        shapes.add(dwg.rect((phodal_width, 25.6), (design_width, 0.6), fill='#000'))
-        shapes.add(dwg.text('design', insert=(secondary_text_x + 4, basic_text_y), fill='#FFFFFF', font_size=40,
-                            font_family='Helvetica'))
+    g.add(dwg.rect((0, 0), (phodal_width, 50), fill='#5E6772'))
+
+    shapes.add(dwg.rect((phodal_width, 25.6), (design_width, 30), fill='#2196f3'))
+
+    shapes.add(dwg.text('design', insert=(secondary_text_x + 5, 36), fill='#000', stroke_width=4, font_size=40,
+                        font_family='Helvetica'))
+    shapes.add(dwg.rect((phodal_width, 0), (design_width, 26), fill='#03a9f4'))
+    shapes.add(dwg.rect((phodal_width, 25.6), (design_width, 0.6), fill='#000'))
+    shapes.add(dwg.text('design', insert=(secondary_text_x + 4, basic_text_y), fill='#FFFFFF', font_size=40,
+                        font_family='Helvetica'))
 
     def draw_red_point():
         shapes.add(dwg.ellipse((red_point, 8), (3, 3), fill='#000'))
         shapes.add(dwg.ellipse((red_point + 1, 8), (3, 3), fill='#f44336'))
 
-    draw_design_word()
     draw_red_point()
 
     shapes.add(dwg.text('phodal', insert=(28, basic_text_y + 1), fill='#000', fill_opacity=0.3, font_size=40,
@@ -183,5 +189,5 @@ def generate_design():
 
 generate_idea()
 generate_article()
-generate_works()
+# generate_works()
 generate_design()
