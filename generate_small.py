@@ -112,19 +112,29 @@ def get_some_random10(num):
 
 
 def generate_works():
+    width = 316
+    height = 50;
+
     dwg = svgwrite.Drawing('shields/works-small.svg', size=(u'316', u'50'))
+
+    a_mask = dwg.mask((0, 0), (width, height), id='a')
+    a_mask.add(dwg.rect((0, 0), (width, height), fill='#eee', rx=3))
+    dwg.add(a_mask)
+
+    g = dwg.add(dwg.g(id='g', fill='none', mask='url(#a)'))
+    g.add(dwg.rect((phodal_width, 0), (width - phodal_width, height), fill='#2c3e50'))
 
     shapes = dwg.add(dwg.g(id='shapes', fill='none'))
 
-    shapes.add(dwg.rect((phodal_width, 0), (142, 50), fill='#2c3e50'))
     for x in range(0, 100, 5):
         text = get_some_random10(100)
-        shapes.add(
+        g.add(
             dwg.text(text, insert=(phodal_width + 1, x), fill='#27ae60', font_size=4,
                      font_family='Inconsolata for Powerline',
                      opacity=0.3, transform="rotate(15 300, 0)"))
 
-    shapes.add(dwg.rect((0, 0), (phodal_width, 50), fill='#5E6772'))
+    g.add(dwg.rect((0, 0), (phodal_width, height), fill='#5E6772'))
+    
     shapes.add(dwg.text('phodal', insert=(28, basic_text_y + 1), fill='#000', fill_opacity=0.3, font_size=40,
                         font_family='Helvetica'))
     shapes.add(dwg.text('phodal', insert=(27, basic_text_y), fill='#FFFFFF', font_size=40, font_family='Helvetica'))
@@ -173,5 +183,5 @@ def generate_design():
 
 generate_idea()
 generate_article()
-# generate_works()
+generate_works()
 generate_design()
