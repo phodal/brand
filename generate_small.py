@@ -75,30 +75,30 @@ def generate_article():
                         font_family='Helvetica'))
     shapes.add(dwg.text('phodal', insert=(27, basic_text_y), fill='#FFFFFF', font_size=40, font_family='Helvetica'))
 
-    shapes.add(dwg.text(insert=(phodal_width, 6), fill='#34495e', opacity=0.2, font_size=4,
+    g.add(dwg.text(insert=(phodal_width, 6), fill='#34495e', opacity=0.2, font_size=4,
                         text='Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, fe-'))
-    shapes.add(dwg.text(insert=(phodal_width, 12), fill='#34495e', opacity=0.2, font_size=4,
+    g.add(dwg.text(insert=(phodal_width, 12), fill='#34495e', opacity=0.2, font_size=4,
                         text='ugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi'))
-    shapes.add(dwg.text(insert=(phodal_width, 18), fill='#34495e', opacity=0.2, font_size=4,
+    g.add(dwg.text(insert=(phodal_width, 18), fill='#34495e', opacity=0.2, font_size=4,
                         text='vitae est. Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, '))
-    shapes.add(dwg.text(insert=(phodal_width, 24), fill='#34495e', opacity=0.2, font_size=4,
+    g.add(dwg.text(insert=(phodal_width, 24), fill='#34495e', opacity=0.2, font_size=4,
                         text='condimentum sed, commodo vitae, ornare sit amet, wisi. Aenean fermentum, elit eget tincidunt condimentum, eros ipsum '))
-    shapes.add(dwg.text(insert=(phodal_width, 30), fill='#34495e', opacity=0.2, font_size=4,
+    g.add(dwg.text(insert=(phodal_width, 30), fill='#34495e', opacity=0.2, font_size=4,
                         text='rutrum orci, sagittis tempus lacus enim ac dui. Donec non enim in turpis pulvinar facilisis. Ut felis. Praesent dapibus,'))
-    shapes.add(dwg.text(insert=(phodal_width, 36), fill='#34495e', opacity=0.2, font_size=4,
+    g.add(dwg.text(insert=(phodal_width, 36), fill='#34495e', opacity=0.2, font_size=4,
                         text=' neque id cursus faucibus, tortor neque egestas augue, eu vulputate magna eros eu erat. Aliquam erat volutpat. Nam dui mi,'))
-    shapes.add(dwg.text(insert=(phodal_width, 42), fill='#34495e', opacity=0.2, font_size=4,
+    g.add(dwg.text(insert=(phodal_width, 42), fill='#34495e', opacity=0.2, font_size=4,
                         text=' tincidunt quis, accumsan porttitor, facilisis luctus, metus'))
-    shapes.add(dwg.text(insert=(phodal_width, 48), fill='#34495e', opacity=0.2, font_size=4,
+    g.add(dwg.text(insert=(phodal_width, 48), fill='#34495e', opacity=0.2, font_size=4,
                         text='Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus magna. Cras in mi at felis aliquet congue. Ut a est eget '))
-    shapes.add(dwg.text(insert=(phodal_width, 54), fill='#34495e', opacity=0.2, font_size=4,
+    g.add(dwg.text(insert=(phodal_width, 54), fill='#34495e', opacity=0.2, font_size=4,
                         text='ligula molestie gravida. Curabitur massa. Donec eleifend, libero at sagittis mollis, tellus est malesuada tellus, at luctus '))
-    shapes.add(dwg.text(insert=(phodal_width, 60), fill='#34495e', opacity=0.2, font_size=4,
+    g.add(dwg.text(insert=(phodal_width, 60), fill='#34495e', opacity=0.2, font_size=4,
                         text='turpis elit sit amet quam. Vivamus pretium ornare est.'))
 
-    shapes.add(dwg.text('article', insert=(secondary_text_x + 1, basic_text_y + 1), fill='#000', fill_opacity=0.3,
+    g.add(dwg.text('article', insert=(secondary_text_x + 1, basic_text_y + 1), fill='#000', fill_opacity=0.3,
                         font_size=40, font_family='Helvetica'))
-    shapes.add(dwg.text('article', insert=(secondary_text_x, basic_text_y), fill='#34495e', font_size=40,
+    g.add(dwg.text('article', insert=(secondary_text_x, basic_text_y), fill='#34495e', font_size=40,
                         font_family='Helvetica'))
 
     dwg.save()
