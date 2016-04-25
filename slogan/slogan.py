@@ -7,10 +7,10 @@ def generate_slogan():
     width = 600
     height = 50
 
-    dwg = svgwrite.Drawing('slogan.svg', profile='full', size=(u'600', u'50'))
+    dwg = svgwrite.Drawing('slogan.svg', profile='full', size=(u'540', u'50'))
 
-    mask = dwg.mask((0, 0), (600, height), id='a')
-    mask.add(dwg.rect((0, 0), (600, height), fill='#eee', rx=5))
+    mask = dwg.mask((0, 0), (540, height), id='a')
+    mask.add(dwg.rect((0, 0), (540, height), fill='#eee', rx=5))
 
     dwg.add(mask)
 
@@ -25,7 +25,7 @@ def generate_slogan():
     dwg.add(slogan_link)
 
     link = Hyperlink('http://www.hug8217.com/', target='_blank')
-    link.add(dwg.text('@hug8217', insert=(430, 35), fill='#34495e', font_size=30))
+    link.add(dwg.text('@花仲马', insert=(410, 35), fill='#34495e', font_size=30))
 
     dwg.add(link)
 
