@@ -61,7 +61,7 @@ Cover
 Logo
 ---
 
-![Phodal's Title](http://brand.phodal.com/titles/generate/cover/greensea.svg)
+![Phodal's Logo](http://brand.phodal.com/logo/small.svg)
 Setup
 ---
 
