@@ -202,8 +202,32 @@ def generate_design():
 
     dwg.save()
 
+def generate_book():
+    dwg = svgwrite.Drawing('shields/book-small.svg', size=(u'323', u'50'))
+    height = 50
+    width = 323
+
+    rect_with_radius_mask = dwg.mask((0, 0), (width, height), id='a')
+    rect_with_radius_mask.add(dwg.rect((0, 0), (width, height), fill='#eee', rx=3))
+    dwg.add(rect_with_radius_mask)
+
+    g = dwg.add(dwg.g(id='g', fill='none', mask='url(#a)'))
+    g.add(dwg.rect((0, 0), (phodal_width, height), fill='#5E6772'))
+    g.add(dwg.rect((phodal_width, 0), (width - phodal_width, height), fill='#2ECC71'))
+
+    shapes = dwg.add(dwg.g(id='shapes', fill='none'))
+    slogan_link = Hyperlink('https://www.phodal.com/', target='_blank')
+    shapes.add(dwg.text('phodal', insert=(28, basic_text_y + 1), fill='#000', fill_opacity=0.3, font_size=40,
+                        font_family='Helvetica'))
+    slogan_link.add(
+        dwg.text('phodal', insert=(27, basic_text_y), fill='#FFFFFF', font_size=40, font_family='Helvetica'))
+    dwg.add(slogan_link)
+
+    dwg.save()
+
 
 generate_idea()
 generate_article()
 # generate_works()
 generate_design()
+generate_book()
