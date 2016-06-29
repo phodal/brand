@@ -2,21 +2,6 @@
 
 > Design for Fun
 
-Badge
----
-
-[![Phodal's Idea](http://brand.phodal.com/shields/idea.svg)](http://ideas.phodal.com/)
-[![Phodal's Article](http://brand.phodal.com/shields/article.svg)](https://www.phodal.com/)
-[![Phodal's Works](http://brand.phodal.com/shields/works.svg)](https://www.phodal.com/)
-[![Phodal's Design](http://brand.phodal.com/shields/design.svg)](https://www.phodal.com/)
-
-Map
----
-
-(Seems not works in GitHub)
-
-[![Phodal's Map](http://brand.phodal.com/backgrounds/map.svg)](http://brand.phodal.com/backgrounds/map.svg)
-
 Usage
 ---
 
@@ -55,20 +40,23 @@ Titles
 ---
 
 ![Phodal's Title](http://brand.phodal.com/titles/generate/titles/yellow.svg)
-![Phodal's Title](http://brand.phodal.com/titles/generate/titles/pumpkin.svg)
-![Phodal's Title](http://brand.phodal.com/titles/generate/titles/silver.svg)
+
+    ![Phodal's Title](http://brand.phodal.com/titles/generate/titles/pumpkin.svg)
 
 Cover
 ---
 
 ![Phodal's Title](http://brand.phodal.com/titles/generate/cover/yellow.svg)
-![Phodal's Title](http://brand.phodal.com/titles/generate/cover/blue.svg)
-![Phodal's Title](http://brand.phodal.com/titles/generate/cover/greensea.svg)
+
+    ![Phodal's Title](http://brand.phodal.com/titles/generate/cover/blue.svg)
 
 Logo
 ---
 
 ![Phodal's Logo](http://brand.phodal.com/logo/small.svg)
+
+    ![Phodal's Logo](http://brand.phodal.com/logo/small.svg)
+
 Setup
 ---
 
